@@ -1,13 +1,13 @@
 import asyncio
-from typing import List, Optional
-
-from pysjtu import Session
-from itertools import count
-import re
-from uuid import uuid4
-from httpx import AsyncClient, HTTPError, RedirectLoop
 import os
+import re
 import sys
+from itertools import count
+from typing import List, Optional
+from uuid import uuid4
+
+from httpx import AsyncClient, HTTPError, RedirectLoop
+from pysjtu import Session
 
 username = sys.argv[1]
 password = sys.argv[2]
