@@ -9,15 +9,15 @@ from httpx import AsyncClient, HTTPError, RedirectLoop
 import os
 import sys
 
-username = sys.argv[0]
-password = sys.argv[1]
+username = sys.argv[1]
+password = sys.argv[2]
 session = Session(username, password)
 image_re = re.compile("\\bhttps?:[^)\'\'\",]+\\.(?:jpg|jpeg|gif|png)")
 video_re = re.compile("\\b/uploads[^)\'\'\",]+\\.(?:mp4)")
 css_re = re.compile("\\/stylesheets?.*.css")
 js_re = re.compile("\\/theme-javascripts?.*.js")
-topic = int(sys.argv[2])
-output = sys.argv[3]
+topic = int(sys.argv[3])
+output = sys.argv[4]
 
 find_resources = lambda p, x: re.findall(p, x)
 resources_map = {}
